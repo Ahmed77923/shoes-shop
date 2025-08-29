@@ -1,0 +1,253 @@
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Edu+NSW+ACT+Cursive:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playwrite+MX+Guides&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto";
+}
+html {
+  font-size: 10px;
+}
+.conterner {
+  width: 80%;
+  margin: auto;
+}
+nav {
+  width: 100%;
+  height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+nav .logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+nav ul li a {
+  color: black;
+  font-size: 1.8rem;
+  transition: all 0.2s ease;
+}
+nav ul li a:hover {
+  color: gray;
+}
+nav .btn {
+  gap: 2rem;
+  display: flex;
+  align-items: center;
+}
+nav button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 2rem;
+}
+.hero .left {
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
+}
+.hero .left h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+}
+.hero .left button,
+.hero .rigth select {
+  cursor: pointer;
+  padding: 0.6rem 1rem;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 1rem;
+}
+
+.boxes {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+.boxes .box {
+  width: 32%;
+  min-width: 20rem;
+  flex-grow: 1;
+  text-align: center;
+  flex-flow: 30rem;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  border-radius: 1rem;
+
+  margin: 1.3;
+}
+.boxes .box img {
+  max-width: 32rem;
+  height: 20.5rem;
+  object-fit: cover;
+  object-position: center;
+}
+.boxes .box h2 {
+  font-size: 1.7rem;
+  text-align: start;
+  font-weight: 700;
+  margin: 1rem;
+}
+.boxes .box p {
+  font-size: 1.4rem;
+  font-weight: 600;
+  text-align: start;
+
+  margin: 1rem;
+  color: rgb(62, 62, 62);
+}
+
+.boxes .box button {
+  padding: 0.8rem;
+  background-color: black;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 1rem;
+  cursor: pointer;
+  width: 100%;
+  transition: all 0.3s ease;
+}
+
+.btn #card {
+  color: white;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  background-color: green;
+}
+.boxes .box button:hover {
+  background-color: green;
+}
+
+.phone-screen {
+  display: none;
+}
+
+@media screen and (max-width: 780px) {
+  .phone-screen {
+    display: block;
+  }
+  nav ul {
+    display: none;
+  }
+}
+
+/* --------*/
+
+.out {
+  position: fixed;
+  top: 0;
+  right: -35.5rem;
+  width: 35.5rem;
+  height: 100%;
+  background: rgba(255, 255, 255);
+  box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+  transition: right 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: 100;
+  padding: 2rem;
+  border-left: 2px solid #eee;
+  border-radius: 1rem 0 0 1rem;
+}
+
+.out.active {
+  right: 0;
+}
+
+.cart-items {
+  overflow-y: auto;
+  max-height: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.cart-items .box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: #fff;
+  padding: 1rem;
+  border-radius: .8rem;
+  box-shadow: 0 .2rem .6rem rgba(0, 0, 0, 0.1);
+}
+
+.cart-items .box img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  object-position: center;
+  border-radius: .5rem;
+}
+
+.cart-items .box h2 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.cart-items .box p {
+  font-size: 1.2rem;
+  color: #555;
+  margin: 0;
+}
+
+.cart-items .box button {
+  margin-left: auto;
+  background: #ff4d4f;
+  border: none;
+  color: #fff;
+  padding: .5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.cart-items .box button:hover {
+  background: #d9363e;
+}
+
+.close-btn {
+  display: block;
+  margin-top: 20px;
+  padding: 10px;
+  width: 100%;
+  background: #1890ff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-btn:hover {
+  background: #096dd9;
+}
